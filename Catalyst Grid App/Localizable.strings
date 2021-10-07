@@ -1,0 +1,24 @@
+/* 
+  Localizable.strings
+  Catalyst Grid App
+
+  Created by Steven Troughton-Smith on 07/10/2021.
+  
+*/
+
+"BACK" = "Back";
+"MENU_VIEW_GO_BACK" = "Go Back";
+
+"INSPECTOR_SECTION_ITEM" = "Item";
+"INSPECTOR_SECTION_ITEM_NAME" = "Name";
+"INSPECTOR_SECTION_ITEM_NAME_PLACEHOLDER" = "Name";
+
+"INSPECTOR_SECTION_SOUND" = "Volume";
+
+"INSPECTOR_SECTION_SETTINGS" = "Options";
+"INSPECTOR_SECTION_SETTINGS_LOOP" = "Loop";
+"INSPECTOR_SECTION_SETTINGS_SOLO" = "Solo";
+"INSPECTOR_SECTION_SETTINGS_FADEIN" = "Fade In";
+"INSPECTOR_SECTION_SETTINGS_FADEOUT" = "Fade Out";
+
+"INSPECTOR_SECTION_COLOR" = "Color";

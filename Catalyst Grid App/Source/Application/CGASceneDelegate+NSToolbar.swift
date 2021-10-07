@@ -41,7 +41,7 @@ extension CGASceneDelegate: NSToolbarDelegate {
 			
 			item.label = NSLocalizedString("BACK", comment: "")
 			item.toolTip = NSLocalizedString("BACK", comment: "")
-			item.isBordered = false
+			item.isBordered = true
 			item.isNavigational = true
 			
 			return item

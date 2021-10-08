@@ -35,9 +35,19 @@ class CGAGridViewCell: UICollectionViewCell {
 		fatalError("init(coder:) has not been implemented")
 	}
 	
+	// MARK: Layout -
+	
 	override func layoutSubviews() {
 		super.layoutSubviews() // Always call super
-		
-		
 	}
+	
+	// MARK: Trait Changes -
+	
+	override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+		super.traitCollectionDidChange(previousTraitCollection)
+		
+		/* CALayer color properties don't automatically update when Light/Dark mode changes */
+		contentView.layer.borderColor = UIColor.separator.cgColor
+	}
+
 }

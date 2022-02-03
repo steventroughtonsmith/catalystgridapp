@@ -160,4 +160,14 @@ class CGAInspectorViewController: UIViewController {
 		
 		hostingController.view.frame = view.bounds.inset(by: view.safeAreaInsets)
 	}
+	
+	// MARK: - Focus Support
+	
+	override func shouldUpdateFocus(in context: UIFocusUpdateContext) -> Bool {
+		/*
+		 SwiftUI is not currently a good keyboard focus citizen, so for the
+		 purpose of this example, disable tabbing to the inspector sidebar
+		 */
+		return false
+	}
 }

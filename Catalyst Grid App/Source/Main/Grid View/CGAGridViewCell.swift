@@ -8,7 +8,7 @@
 import UIKit
 
 class CGAGridViewCell: UICollectionViewCell {
-	
+		
 	/*
 	 Custom subviews go here, add to the content view, then lay them out in layoutSubviews
 	 */
@@ -28,7 +28,6 @@ class CGAGridViewCell: UICollectionViewCell {
 		layer.shadowColor = UIColor.black.cgColor
 		layer.shadowOpacity = 0.3
 		layer.shadowOffset = CGSize(width: 0, height: UIFloat(1))
-		
 	}
 	
 	required init?(coder: NSCoder) {
@@ -39,6 +38,11 @@ class CGAGridViewCell: UICollectionViewCell {
 	
 	override func layoutSubviews() {
 		super.layoutSubviews() // Always call super
+		
+		if #available(macCatalyst 15.0, iOS 15.0, *) {
+			let effect = UIFocusHaloEffect(roundedRect: bounds, cornerRadius: contentView.layer.cornerRadius, curve: contentView.layer.cornerCurve)
+			focusEffect = effect
+		}
 	}
 	
 	// MARK: Trait Changes -

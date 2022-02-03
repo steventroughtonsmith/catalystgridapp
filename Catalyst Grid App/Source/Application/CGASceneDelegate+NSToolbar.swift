@@ -32,7 +32,7 @@ extension CGASceneDelegate: NSToolbarDelegate {
 	func toolbar(_ toolbar: NSToolbar, itemForItemIdentifier itemIdentifier: NSToolbarItem.Identifier, willBeInsertedIntoToolbar flag: Bool) -> NSToolbarItem? {
 		if itemIdentifier == .back {
 			
-			let barItem = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: nil, action: NSSelectorFromString("goBack:"))
+			let barItem = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: mainVC, action: NSSelectorFromString("goBack:"))
 			/*
 			 NSToolbarItemGroup does not auto-enable/disable buttons based on the responder chain, so we need an NSToolbarItem here instead
 			 */

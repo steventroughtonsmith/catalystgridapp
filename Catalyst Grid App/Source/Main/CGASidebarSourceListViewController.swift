@@ -156,4 +156,15 @@ class CGASidebarSourceListViewController: UICollectionViewController {
 		}
 	}
 	
+	// MARK: - Focus Support
+	
+	override func collectionView(_ collectionView: UICollectionView, canFocusItemAt indexPath: IndexPath) -> Bool {
+
+		/* Don't focus the favorites group header */
+		if indexPath.section == 0 && indexPath.row == 0 {
+			return false
+		}
+		
+		return true
+	}
 }

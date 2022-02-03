@@ -10,7 +10,8 @@ import UIKit
 
 class CGASceneDelegate: UIResponder, UIWindowSceneDelegate {
 	var window: UIWindow?
-	
+	let mainVC = CGAMainViewController()
+
 	func buildPrimaryUI() {
 		
 		guard let window = window, let windowScene = window.windowScene else { return }
@@ -18,7 +19,6 @@ class CGASceneDelegate: UIResponder, UIWindowSceneDelegate {
 		let svc = UISplitViewController(style: .doubleColumn)
 		
 		let sidebarVC = CGASidebarSourceListViewController()
-		let mainVC = CGAMainViewController()
 		mainVC.sceneDelegate = self
 		
 		svc.viewControllers = [sidebarVC, mainVC]
